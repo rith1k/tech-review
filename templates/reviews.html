@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Reviews</title>
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+        crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css" integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz"
+        crossorigin="anonymous">
+
+    <style>
+   
+/* Create three equal columns that floats next to each other */
+.column {
+  display: none; /* Hide columns by default */
+}
+
+/* Clear floats after rows */
+.row:after {
+  display: table;
+  clear: both;
+}
+
+/* Content */
+
+/* The "show" class is added to the filtered elements */
+.show {
+  display: block;
+}
+
+/* Style the buttons */
+.btn {
+  border: none;
+  outline: none;
+  background-color: white;
+  cursor: pointer;
+}
+
+/* Add a grey background color on mouse-over */
+.btn:hover {
+  background-color: #ddd;
+}
+
+/* Add a dark background color to the active button */
+.btn.active {
+  background-color: black;
+   color: white;
+}
+div  .column a{
+  text-emphasis: none;
+  text-decoration: none;
+}
+
+      h1{
+        left: 0;
+        margin-right: 100px;
+      }
+      </style>
+</head>
+<body>
+    {% extends "index.html" %}
+        {% block content %}
+      
+<div id="myBtnContainer" class="d-flex justify-content-center m-2" >
+  <button class="btn active" onclick="filterSelection('all')"> Show all</button>
+  <button class="btn" href="#gaming" onclick="filterSelection('gaming')"> Gaming</button>
+  <button class="btn" href="#notebooks" onclick="filterSelection('Notebook')"> Notebooks</button>
+  <button class="btn" href="#2in1" onclick="filterSelection('2in1')"> 2-in-1 Laptop</button>
+</div>
+
+
+
+<section id="gallery" >
+    <div class="container  p-4 shadow-lg" >
+         <div class="row" id="gaming">
+             <div class="col-lg-4 mb-4 column gaming">
+                 <a class="card border" href="razer">
+                     <img class="card-img-top" style="height: 300px;"src="../static/images/razer.jpg" alt="">
+                     <div class="card-body " style="background-size: cover;">
+                         <h5 class="card-title text-center">Razer Blade 15</h5>
+                         <p class="card-text">The Razer Blade is one of the smallest 15.6” gaming laptops, 
+                          striking the perfect balance of power and portability.</p>
+                        </div>
+                 </a>
+             </div>
+             <div class="col-lg-4 mb-4 column gaming">
+                <a class="card border" href="asus">
+                    <img class="card-img-top" style="height: 300px;"src="../static/images/Asus.jpg" alt="">
+                    <div class="card-body" style="background-size: cover;">
+                        <h5 class="card-title">Asus ROG</h5>
+                        <p class="card-text">ROG laptops undergo extensive vibration, drop, and pressure testing to ensure they can survive everyday use, while their hinges, keyboards, and ports are tested for resilience against common wear. </p>
+                       </div>
+                </a>
+            </div>
+            <div class="col-lg-4 mb-4 column gaming">
+                 <a class="card border" href="msi" style="background-size: cover;">
+                     <img class="card-img-top" style="height: 300px;" src="../static/images/msi.jpg"alt="">
+                     <div class="card-body" style="background-size: cover;">
+                         <h5 class="card-title">MSI</h5>
+                         <p class="card-text">                                The Prestige 15 is powered by the 10th Gen Intel Core i7 processor, for on-the-go creators to breeze through demanding tasks faster than ever before.
+                          </p>
+                                             </div>
+                 </a>
+             </div>
+         </div>
+         <div class="row"  id="notebook">
+            <div class="col-lg-4 mb-4 column Notebook">
+                <a class="card border" href="macbook">
+                    <img class="card-img-top" style="height: 300px;" src="../static/images/macbook.jpg" alt="">
+                    <div class="card-body" style="background-size: cover;">
+                        <h5 class="card-title">Macbook</h5>
+                        <p class="card-text">                                Macbook Pro elevates the notebook to a whole new level of 
+                            performance and portability. Wherever your ideas take you, 
+                                you'll get there faster than ever with high-performance
+                            processors and memory, advanced graphics , blazing fast 
+                            storage, and more
+</p>
+                       </div>
+                </a>
+            </div>
+            <div class="col-lg-4 mb-4 column Notebook">
+                <a class="card border" href="surface">
+                    <img class="card-img-top" style="height: 300px;" src="../static/images/surface.jpg" alt="">
+                    <div class="card-body" style="background-size: cover;">
+                        <h5 class="card-title">Surface</h5>
+                        <p class="card-text">                            Microsoft Surface Laptop is designed for Windows 10 S, streamlined for security and superior performance. Enjoy the Windows you know, Microsoft-verified apps delivered via the Windows Store, and the convenience of the cloud.
+                          </p>
+                      </div>
+                </a>
+            </div>
+            <div class="col-lg-4 mb-4 column Notebook">
+                <a class="card border" href="thinkpad">
+                    <img class="card-img-top" style="height: 300px;" src="../static/images/thinkpad.jpg" alt="">
+                    <div class="card-body" style="background-size: cover;">
+                        <h5 class="card-title ">Thinkpad</h5>
+                        <p class="card-text">   The ThinkPad T480 features Power Bridge technology, which utilizes a 23 Wh built-in battery in combination with a 23 Wh
+                            external battery. This allows you to swap out a battery and replace it with a fully charged one without having to turn your
+                            machine off.
+                         </p>
+                                           </div>
+                </a>
+            </div>
+        </div>
+   
+        <div class="row" id="2in1">
+            <div class="col-lg-4 mb-4 column 2in1">
+                <a class="card border" href="acer">
+                    <img class="card-img-top "style="height: 300px;" src="../static/images/acer.jpg" alt="">
+                    <div class="card-body ">
+                        <h5 class="card-title">Acer</h5>
+                        <p class="card-text">                                Talk about versatility! The ultra-slim and light Spin 3 convertible laptop functions like a traditional laptop but with the hands-on, tactile user experience of a tablet. Just rotate the revolutionary 360° Hinge and watch it convert right in front of your eyes from a laptop to display, tent or tablet mode. It even comes with a rechargeable stylus that docks right into the PC, now that’s epic functionality!
+                          </p>
+                        </div>
+                </a>
+            </div>
+            <div class="col-lg-4 mb-4 column 2in1">
+                <a class="card border" href="lg">
+                    <img class="card-img-top" style="height: 300px;" src="../static/images/Lg 2-in-1.jpg" alt="">
+                    <div class="card-body">
+                        <h5 class="card-title ">LG</h5>
+                        <p class="card-text">                                For ultra-portability throughout the day, this 2.5 lbs laptop converts into a tablet with great ease. Draw, write, design, and more, with the flexibility you need to get the job done. For ultra-portability throughout the day, this 2.5 lbs laptop converts into a tablet with great ease. Draw, write, design, and more, with the flexibility you need to get the job done.
+                          </p>
+                        </div>
+                </a>
+            </div>
+            <div class="col-lg-4 mb-4 column 2in1">
+                <a class="card border" href="yoga">
+                    <img class="card-img-top" style="height: 300px;" src="../static/images/yoga.jpg" alt="">
+                    <div class="card-body">
+                        <h5 class="card-title">Yoga</h5>
+                        <p class="card-text"> Lenovo Yoga 710 Convertible 2-in-1 Laptop: Work and play wherever you go with this 15-inch Lenovo Yoga laptop. Equipped with a 4-in-1 card reader and two USB 3.0 ports, this multifunctional machine works with a range of external storage devices. Stay in touch when you use the 720p camera and combo array microphone included with this 15-inch Lenovo Yoga laptop to videoconference with friends and clients.
+                          </p>
+                       </div>
+                </a>
+            </div>
+        </div>        </div>
+ </section>
+
+
+<!-- END GRID -->
+<script>
+filterSelection("all") // Execute the function and show all columns
+function filterSelection(c) {
+  var x, i;
+  x = document.getElementsByClassName("column");
+  if (c == "all") c = "";
+  // Add the "show" class (display:block) to the filtered elements, and remove the "show" class from the elements that are not selected
+  for (i = 0; i < x.length; i++) {
+    w3RemoveClass(x[i], "show");
+    if (x[i].className.indexOf(c) > -1) w3AddClass(x[i], "show");
+  }
+}
+
+// Show filtered elements
+function w3AddClass(element, name) {
+  var i, arr1, arr2;
+  arr1 = element.className.split(" ");
+  arr2 = name.split(" ");
+  for (i = 0; i < arr2.length; i++) {
+    if (arr1.indexOf(arr2[i]) == -1) {
+      element.className += " " + arr2[i];
+    }
+  }
+}
+
+// Hide elements that are not selected
+function w3RemoveClass(element, name) {
+  var i, arr1, arr2;
+  arr1 = element.className.split(" ");
+  arr2 = name.split(" ");
+  for (i = 0; i < arr2.length; i++) {
+    while (arr1.indexOf(arr2[i]) > -1) {
+      arr1.splice(arr1.indexOf(arr2[i]), 1);
+    }
+  }
+  element.className = arr1.join(" ");
+}
+
+// Add active class to the current button (highlight it)
+var btnContainer = document.getElementById("myBtnContainer");
+var btns = btnContainer.getElementsByClassName("btn");
+for (var i = 0; i < btns.length; i++) {
+  btns[i].addEventListener("click", function(){
+    var current = document.getElementsByClassName("active");
+    current[0].className = current[0].className.replace(" active", "");
+    this.className += " active";
+  });
+}
+
+</script>
+
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+crossorigin="anonymous"></script>
+{% endblock %}
+    
+</body>
+</html>

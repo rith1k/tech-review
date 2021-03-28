@@ -1,0 +1,1238 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>My Laptop Website</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.css" />
+
+<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.css" media="screen">
+
+<script src="//cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.js"></script>
+<link rel="stylesheet" href="css/bootstrap.min.css">
+<!-- animate CSS -->
+<link rel="stylesheet" href="css/animate.css">
+<!-- owl carousel CSS -->
+<link rel="stylesheet" href="css/owl.carousel.min.css">
+<!-- font awesome CSS -->
+<link rel="stylesheet" href="css/all.css">
+<!-- flaticon CSS -->
+<link rel="stylesheet" href="css/flaticon.css">
+<link rel="stylesheet" href="css/themify-icons.css">
+<link rel="stylesheet" href="css/nice-select.css">
+<!-- font awesome CSS -->
+<link rel="stylesheet" href="css/magnific-popup.css">
+<!-- swiper CSS -->
+<link rel="stylesheet" href="css/slick.css">
+<!-- style CSS -->
+<link rel="stylesheet" href="css/style.css">
+  <style>
+    .carousel-item {
+  height: 100vh;
+  min-height: 350px;
+  background: no-repeat center center scroll;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  position:relative;
+}
+.carousel-item video {
+    position:relative;
+    z-index:0;
+}
+.lead {
+    position:absolute;
+    top:50%;
+    color: white;
+    background-color:black;
+    text-decoration: solid;
+    left: 40%;
+    z-index:1;
+}
+.btnl{
+    position:absolute;
+    top:55%;
+    color: white;
+    text-decoration: solid;
+    left: 50%;
+    z-index:1;
+
+}
+body {
+	font-family: 'Open Sans', sans-serif !important;
+    background: #fff;
+    color: #222;
+}
+
+.mybg-dark {
+    background: #000000 !important;
+}
+
+header.masthead {
+    position: relative;
+    height: 100vh;
+    background-color: #343a40;
+    background: url('https://images.pexels.com/photos/167480/pexels-photo-167480.jpeg?auto=compress&cs=tinysrgb&h=650&w=940') no-repeat center center;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    padding-top: 8rem;
+    padding-bottom: 8rem;
+}
+
+header.masthead .overlay{position:absolute;background-color:#212529;height:100%;width:100%;top:0;left:0;opacity:.3}
+
+@media (min-width:768px) {
+    header.masthead {
+        padding-top: 12rem;
+        padding-bottom: 12rem;
+    }
+    header.masthead h3 {
+        font-size: 4rem;
+    }
+}
+
+.testimonials{
+    padding-top:5rem;
+    padding-bottom:5rem;
+    
+}
+
+.myform-control {
+    display: block;
+    width: 100%;
+    padding: .375rem .75rem;
+    font-size: 1rem;
+    line-height: 1.5;
+    color: #495057;
+    background-color: #fff;
+    background-clip: padding-box;
+    border: 1px solid #ced4da;
+    border-radius: .25rem;
+    transition: border-color .15s ease-in-out, box-shadow .15s ease-in-out;
+}
+
+button.btn.btn-light {
+    position: absolute;
+    background: transparent;
+    border: none;
+    height: 38px;
+    right: 23px;
+}
+
+a.btn.btn-default.btn-scroll {
+    border: 2px solid #fff;
+    color: #fff;
+    border-radius: 100%;
+}
+
+
+
+.big-img img {
+    height: 325px;
+    width:100%;
+    object-fit: cover;
+}
+
+.inner-section{
+ position:relative;   
+}
+.container.slider-top-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.btn-login {
+    width: 138px;
+    background: #1fc6d8 !important;
+    border: 1px solid #1fc6d8 !important;
+}
+.btn-login:hover{
+       background: #3683a1 !important;
+    border: 1px solid #1fc6d8 !important;
+}
+.mfa-white {
+    color: #fff !important;
+}
+
+h3.my-heading {
+    font-family: 'Kaushan Script', cursive;
+    color: #fff;
+    font-weight: bold;
+    font-size: 30px;
+    margin:0;
+}
+
+p.myp-slider.text-center {
+    color: #fff;
+}
+
+.btn-register {
+    width: 138px;
+    background: #1fc6d8 !important;
+    border: 1px solid #1fc6d8 !important;
+}
+
+
+.btn-register:hover{
+       background: #3683a1 !important;
+    border: 1px solid #1fc6d8 !important;
+}
+
+.btn-join {
+    background: #1fc6d8 !important;
+    border: 1px solid #1fc6d8 !important;
+}
+
+section#about {
+    width: 100%;
+    padding-top: 2.1rem;
+    padding-bottom: 2.1rem;
+}
+
+.btn-circle {
+    border-radius: 50%;
+}
+
+.my-social-btn {
+    background: lightgrey;
+}
+
+.card:hover .my-social-btn.fb {
+    background: #205b9f;
+}
+.card:hover .my-social-btn.twitter {
+    background: #00ace3;
+}
+.card:hover .my-social-btn.google {
+    background: #ff3921;
+}
+/*
+a.btn.btn-circle.my-social-btn.fb:hover {
+    background: #205b9f;
+}
+
+a.btn.btn-circle.my-social-btn.twitter:hover {
+    background: #00ace3;
+}
+
+a.btn.btn-circle.my-social-btn.google:hover {
+    background: #ff3921;
+}
+*/
+a.btn.btn-circle.my-social-btn {
+    color: #fff;
+    height: 40px;
+    width: 40px;
+}
+
+.inner-section h3 {
+    text-transform: uppercase;
+    font-weight:bold;
+}
+
+.inner-section h3:after {
+    content: '';
+    position: absolute;
+    border-bottom: 4px solid #008ba3;
+    width: 100%;
+    max-width: 10%;
+    top: 37px;
+    left: 0;
+}
+span.bg-main {
+    color: #008ba3;
+}
+
+hr.my-border {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    border: 0;
+    border-top: 2px solid #008ba3;
+    width: 117px;
+}
+
+.linear-grid img {
+    width: 100%;
+    height: 124px;
+    object-fit: cover;
+}
+
+.mybg-events {
+    background: url(../static/images/laptopbg1.jpg) no-repeat center center fixed;
+    background-size: cover;
+}
+
+.h-262 {
+    height: 262px !important;
+}
+
+h3.title-heading.text-center {
+    color: #fff;
+    font-weight: bold;
+}
+
+p.myp.text-center {
+    color: #fff;
+    font-size: 14px;
+    margin-bottom: 3rem;
+}
+
+.big-img2 img {
+    height: 472px;
+    width: 100%;
+    object-fit: cover;
+}
+
+.my-grid img {
+    height: 228px;
+    width: 100%;
+    object-fit: cover;
+}
+
+
+
+
+
+
+.text-block {
+    min-height: 228px;
+    height: auto;
+    background: #fff;
+    padding: 15px;
+}
+
+h5.events-heading {
+    font-weight: bold;
+    font-size: 17px;
+}
+
+p.myp-font {
+    font-size: 15px;
+}
+
+section#group {
+    background: #fff;
+    height: 100%;
+    width: 100%;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+}
+
+.card {
+    font-size: 1em;
+    overflow: hidden;
+    padding: 0;
+    border: none !important;
+    border-radius: .28571429rem;
+}
+
+.card:hover {
+    color: #222 !important;
+    box-shadow: 0 1px 3px 0 #d4d4d5, 0 0 0 1px #d4d4d5;
+}
+
+.card-block {
+    font-size: 1em;
+    position: relative;
+    margin: 0;
+    padding: 1em;
+    border: none !important;
+    border-top: 1px solid rgba(34, 36, 38, .1);
+    box-shadow: none;
+}
+
+.card-img-top {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+.card-title {
+    font-size: 1.28571429em;
+    font-weight: 700;
+    line-height: 1.2857em;
+}
+
+.card-text {
+    clear: both;
+    margin-top: .5em;
+    color: rgba(0, 0, 0, .68);
+}
+
+.card-footer {
+    font-size: 1em;
+    position: static;
+    top: 0;
+    left: 0;
+    max-width: 100%;
+    padding: .75em 1em;
+    color: rgba(0, 0, 0, .4);
+    border-top: 1px solid rgba(0, 0, 0, .05) !important;
+    background: #fff;
+}
+
+.card-inverse .btn {
+    border: 1px solid rgba(0, 0, 0, .05);
+}
+
+.mybg-music {
+    background: url(../static/images/laptopbg3.jpg) no-repeat center center fixed;
+    background-size: cover;
+}
+
+section#marketplace {
+    background: #f7f7f7;
+    height: 100%;
+    width: 100%;
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+}
+
+section#marketplace .card {
+    font-size: 1em;
+    overflow: hidden;
+    padding: 0;
+    border: none;
+    border-radius: .28571429rem;
+    box-shadow: 0 1px 3px 0 #d4d4d5, 0 0 0 1px #d4d4d5;
+}
+
+section#artist {
+    background: #fff;
+    height: 100%;
+    width: 100%;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+}
+
+a.link-color {
+    color: #008ba3;
+    font-weight: bold;
+}
+
+.my-right-text {
+    padding-top: 3rem;
+}
+
+
+/***music gallery***/
+
+.gal-item {
+overflow: hidden;
+}
+.gal-item .box {
+
+overflow: hidden;
+}
+.box img {
+height: 160px;
+width: 100%;
+object-fit: cover;
+-o-object-fit: cover;
+}
+/****/
+.item {
+position: relative;
+}
+.item img {
+max-width: 100%;
+-moz-transition: all 0.3s;
+-webkit-transition: all 0.3s;
+transition: all 0.3s;
+}
+.item:hover img {
+-moz-transform: scale(1.4);
+-webkit-transform: scale(1.4);
+transform: scale(1.4);
+}
+
+
+
+/*sidebar navigation*/
+#main {display: none;}
+#main {
+	float: right;
+    transition: margin-right .5s;
+    
+}
+
+
+
+
+.floating-arrow {
+    -webkit-animation: floating-arrow 1.6s infinite ease-in-out 0s;
+    -o-animation: floating-arrow 1.6s infinite ease-in-out 0s;
+    animation: floating-arrow 1.6s infinite ease-in-out 0s;
+}
+
+@keyframes floating-arrow {
+    from {
+        -webkit-transform: translateY(0);
+        transform: translateY(0);
+    }
+    65% {
+        -webkit-transform: translateY(11px);
+        transform: translateY(11px);
+    }
+    to {
+        -webkit-transform: translateY(0);
+        transform: translateY(0);
+    }
+}
+
+footer.footer{padding-top:4rem;padding-bottom:4rem}
+
+li.list-inline-item a {
+    color: #fff;
+    text-decoration: none;
+}
+
+
+/*-------------------responsive-----------------*/
+
+@media screen and (max-width: 520px) {
+    ::placeholder {
+        font-size: 10px;
+    }
+    .scroll-down {
+        position: absolute;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        top: 45px;
+    }
+    
+    .text-block {
+        padding: 15px;
+    }
+    .linear-grid img {
+        width: 100%;
+        height: 181px;
+    }
+    .my-grid img {
+        width: 100%;
+    }
+   
+   
+}
+@media screen and (max-width: 767px) {
+    .btn-login{
+       width:100%; 
+    }
+    .btn-register {
+         width:100%; 
+    }
+}
+
+
+
+@media only screen and (min-width:2560px){}
+@media only screen and (min-width:1600px) and (max-width:1920px){
+}
+@media only screen and (min-width:1440px){
+}
+@media only screen and (max-width: 1280px){
+}
+@media only screen and (max-width: 1024px){
+	.mob-ul{list-style-type: none; padding-left: 0;}
+	h5.events-heading{font-size:15px;}
+	p.myp-font{font-size:13px;}
+}
+@media only screen and (min-width: 960px) and (max-width: 1023px) {
+	.mob-ul{list-style-type: none; padding-left: 0;}
+}
+
+@media only screen and (min-width: 768px) and (max-width: 959px) {
+	#main {display: block;}
+	.header-wrap  {color: #fff;}
+	.mob-ul{list-style-type: none; padding-left: 0;}
+	.header-wrap .sub-menu {width: 250px;}
+
+}
+
+@media only screen and (max-width:736px) and (orientation:landscape){
+	#main {display: block;}
+	.header-wrap  {color: #fff;}
+	.mob-ul{list-style-type: none; padding-left: 0;}
+	.header-wrap .sub-menu {width: 250px;}
+}
+@media only screen and (max-width:667px) and (orientation:landscape){
+	#main {display: block;}
+	.header-wrap  {color: #fff;}
+	.mob-ul{list-style-type: none; padding-left: 0;}
+	.header-wrap .sub-menu {width: 250px;}
+}
+@media only screen and (max-width:568px) and (orientation:landscape){
+	#main {display: block;}
+	.header-wrap  {color: #fff;}
+	.mob-ul{list-style-type: none; padding-left: 0;}
+	.header-wrap .sub-menu {width: 250px;}
+}
+@media only screen and (min-width: 600px) and (max-width: 767px) {
+    h5.events-heading {
+    font-size: 20px;
+}
+p.myp-font {
+    font-size: 15px;
+}
+	#main {display: block;}
+	.header-wrap  {color: #fff;}
+	.mob-ul{list-style-type: none; padding-left: 0;}
+	.header-wrap .sub-menu {width: 250px;}	
+	.box img {height: 100%;}
+}
+@media only screen and (min-width: 480px) and (max-width: 599px) {
+    .inner-section h3 {
+        font-size: 18px;
+    }
+    h5.events-heading{font-size:15px;}
+    .inner-section p {
+    font-size: 13px;
+    text-align: justify;
+    }
+    section#marketplace img {
+     object-fit: cover;
+    }
+	#main {display: block;}
+	.header-wrap  {color: #fff;}
+	.mob-ul{list-style-type: none; padding-left: 0;}
+	.header-wrap .sub-menu {width: 250px;}
+	.box img {height: 100%;}
+}
+@media only screen and (min-width: 321px) and (max-width: 479px) {
+    .inner-section h3 {
+        font-size: 18px;
+    }
+    h5.events-heading{font-size:15px;}
+    .inner-section p {
+    font-size: 13px;
+    text-align: justify;
+    }
+    section#marketplace img {
+     object-fit: cover;
+    }
+	#main {display: block;}
+	.header-wrap  {color: #fff;}
+	.mob-ul{list-style-type: none; padding-left: 0;}
+	.header-wrap .sub-menu {width: 250px;}	
+	.box img {height: 100%;}
+}
+@media only screen and (max-width:568px) and (orientation:landscape){
+	#main {display: block;}
+	.header-wrap  {color: #fff;}
+	.mob-ul{list-style-type: none; padding-left: 0;}
+	.header-wrap .sub-menu {width: 250px;}
+	.box img {height: 100%;}
+}
+@media only screen and (max-width: 320px) {
+     .inner-section h3 {
+        font-size: 18px;
+    }
+    h5.events-heading{font-size:15px;}
+    .inner-section p {
+    font-size: 13px;
+    text-align: justify;
+    }
+    section#marketplace img {
+     object-fit: cover;
+    }
+	#main {display: block;}
+	.header-wrap  {color: #fff;}
+	.mob-ul{list-style-type: none; padding-left: 0;}
+	.header-wrap .sub-menu {width: 250px;}
+	.box img {height: 100%;}
+}
+
+.blog-container {
+        background: #fff;
+        border-radius: 7px;
+        border: 1px solid black;
+        box-shadow: gray 6px 6px 6px 6px;
+        font-family: "adelle-sans", sans-serif;
+        font-weight: 100;
+        margin: 48px auto;
+        width: 500px;
+      }
+      @media screen and (min-width: 480px) {
+        .blog-container {
+          width: 28rem;
+        }
+      }
+      @media screen and (min-width: 767px) {
+        .blog-container {
+          width: 40rem;
+        }
+      }
+      @media screen and (min-width: 959px) {
+        .blog-container {
+          width: 50rem;
+        }
+      }
+
+      .blog-container a {
+        color: #4d4dff;
+        text-decoration: none;
+        -webkit-transition: 0.25s ease;
+        transition: 0.25s ease;
+      }
+      .blog-container a:hover {
+        border-color: #ff4d4d;
+        color: #ff4d4d;
+        text-decoration: none;
+        text-emphasis: none;
+      }
+
+      .blog-cover {
+        background-size: cover;
+        border-radius: 5px 5px 0 0;
+        height: 15rem;
+        box-shadow: inset rgba(0, 0, 0, 0.2) 0 64px 64px 16px;
+      }
+
+      .blog-author,
+      .blog-author--no-cover {
+        padding-top: 0.125rem;
+        width: 80%;
+      }
+
+      .blog-author h3::before,
+      .blog-author--no-cover h3::before {
+        background: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/17779/russ.jpeg");
+        background-size: cover;
+        border-radius: 50%;
+        content: " ";
+        display: inline-block;
+        height: 32px;
+        margin-right: 0.5rem;
+        position: relative;
+        top: 8px;
+        width: 32px;
+      }
+
+      .blog-author h3 {
+        color: black;
+        font-size: 20px;
+      }
+
+      .blog-author--no-cover h3 {
+        color: #999999;
+        font-weight: 100;
+      }
+
+      .blog-body {
+        margin: 0 auto;
+        width: 80%;
+      }
+
+      .video-body {
+        height: 100%;
+        width: 100%;
+      }
+
+      .blog-title h4 a {
+        color: #333;
+        font-weight: 100;
+      }
+
+      .blog-summary p {
+        color: #4d4d4d;
+      }
+
+      .blog-tags ul {
+        display: -webkit-box;
+        display: flex;
+        -webkit-box-orient: horizontal;
+        -webkit-box-direction: normal;
+        flex-direction: row;
+        flex-wrap: wrap;
+        list-style: none;
+        padding-left: 0;
+      }
+
+      .blog-tags li + li {
+        margin-left: 0.5rem;
+      }
+
+      .blog-tags a {
+        border: 1px solid #999999;
+        border-radius: 3px;
+        color: #999999;
+        font-size: 0.75rem;
+        height: 1.5rem;
+        line-height: 1.5rem;
+        letter-spacing: 1px;
+        padding: 0 0.5rem;
+        text-align: center;
+        text-transform: uppercase;
+        white-space: nowrap;
+        width: 5rem;
+      }
+
+      .blog-footer {
+        border-top: 1px solid #e6e6e6;
+        margin: 0 auto;
+        padding-bottom: 0.125rem;
+        width: 80%;
+      }
+
+      .blog-footer ul {
+        list-style: none;
+        display: -webkit-box;
+        display: flex;
+        -webkit-box-flex: row;
+        flex: row wrap;
+        -webkit-box-pack: end;
+        justify-content: flex-end;
+        padding-left: 0;
+      }
+
+      .blog-footer li:first-child {
+        margin-right: auto;
+      }
+
+      .blog-footer li + li {
+        margin-left: 0.5rem;
+      }
+
+      .blog-footer li {
+        color: #999999;
+        font-size: 0.75rem;
+        height: 1.5rem;
+        letter-spacing: 1px;
+        line-height: 1.5rem;
+        text-align: center;
+        text-transform: uppercase;
+        position: relative;
+        white-space: nowrap;
+      }
+      .blog-footer li a {
+        color: #999999;
+      }
+
+      .comments {
+        margin-right: 1rem;
+      }
+
+      .published-date {
+        border: 1px solid #999999;
+        border-radius: 3px;
+        padding: 0 0.5rem;
+      }
+
+      .numero {
+        position: relative;
+        top: -0.5rem;
+      }
+
+      .icon-star,
+      .icon-bubble {
+        fill: #999999;
+        height: 24px;
+        margin-right: 0.5rem;
+        -webkit-transition: 0.25s ease;
+        transition: 0.25s ease;
+        width: 24px;
+      }
+      .icon-star:hover,
+      .icon-bubble:hover {
+        fill: #ff4d4d;
+      }
+     
+
+  </style>
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous" />
+
+</head>
+
+<body>
+    {% extends "login.html" %}
+    {% block content %}
+  <header>
+      
+        
+          <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+                {% if login_success=="You've successfully logged in." %}
+                <div class="alert alert-warning alert-dismissible fade show" role="alert">
+                  <strong>Success:</strong> {{login_success}}
+                  <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                  </button>
+                </div>
+                {% elif logout_msg=="Successfully Logged out"%}
+                <div class="alert alert-warning alert-dismissible fade show" role="alert">
+                  <strong>Success:</strong> {{logout_msg}}
+                  <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                  </button>
+                </div>
+                {%endif%}
+            
+            <ol class="carousel-indicators">
+              <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+              <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+              <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+              <li data-target="#carouselExampleIndicators" data-slide-to="3"></li>
+
+            </ol>
+            <div class="carousel-inner" role="listbox">
+              <!-- Slide One - Set the background image for this slide in the line below -->
+             
+              <div class="carousel-item active  ">
+                  <video class="video-fluid" autoplay loop muted src="static/images/Laptop12.mp4" style="position:relative; z-index:0; object-fit:  cover; width:100%; min-height: 1000px;">
+                    <div class="carousel-caption d-none d-md-block">
+                  </div></video>
+                  <h2 class="display-4"></h2>
+                  <p class="lead mx-auto"  style="z-index:1; position: absolute;">Welcome to the world of Laptops.</p>
+                </div>
+              <!-- Slide Three - Set the background image for this slide in the line below -->
+              <div class="carousel-item ">
+                  <video class="video-fluid" autoplay loop muted src="static/images/Laptop11.mp4" style="position:relative; z-index:0; object-fit:  cover; width:100%; min-height: 1000px;">
+                    <div class="carousel-caption d-none d-md-block">
+                  </div></video>
+                  <h2 class="display-4"></h2>
+                  <p class="lead" style="z-index:1; position: absolute;">Go in depth. Find YOURSELF!</p>
+                </div>
+                <div class="carousel-item ">
+                    <video class="video-fluid" autoplay loop muted src="static/images/Laptop14.mp4" style="position:relative; z-index:0; object-fit:  cover; width:100%; min-height: 1000px;">
+                      <div class="carousel-caption d-none d-md-block">
+                    </div></video>
+                    <h2 class="display-4"></h2>
+                    <p  class="lead" style="z-index:1; position: absolute;">Let your laptop represent you.</p>
+                
+                  </div>
+                  <div class="carousel-item ">
+                      <video class="video-fluid" autoplay loop muted src="static/images/Laptop13.mp4" style="position:relative; z-index:0; object-fit:  cover; width:100%; min-height: 1000px;">
+                        <div class="carousel-caption d-none d-md-block">
+                      </div></video>
+                      <h2 class="display-4"></h2>
+                      <p class="lead" style="z-index:1; position: absolute;">The best of the best. Nothing less, nothing more.</p>
+                    </div>
+              
+              <!-- Slide Two - Set the background image for this slide in the line below -->
+            </div>
+            <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+                  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                  <span class="sr-only">Previous</span>
+                </a>
+            <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+                  <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                  <span class="sr-only">Next</span>
+                </a>
+          
+          
+              </div>
+        </header>
+   
+        <div class="blog-container wow bounceInLeft" data-wow-duration="1.4s">
+            <div class="blog-header">
+              <div
+                class="blog-cover"
+                style=" width: 100%; background-size: cover; height:400px; background-repeat:space; background-image: url({{img}});"       >
+              </div>      </div>
+      
+            <div class="blog-body pt-4 pb-2">
+                <center><h1>Today's Tip</h1></center><hr>
+              <div class="blog-title">
+                <h4><a href="">{{title}}</a></h4><br>
+              </div>
+      
+              <div class="blog-summary">
+                <h6>{{en3}}</h6><hr>
+              </div>
+              <div class="blog-tags">
+                <ul>
+                  <li><a >laptops</a></li>
+                  <li><a >web design</a></li>
+                  <li><a >baby yoda</a></li>
+                  <li><a >Computers</a></li>
+                </ul>
+              </div>
+            </div>
+      
+            <div class="blog-footer">
+              <ul>
+                <li class="published-date">{{meta}}</li>
+              </ul>
+            </div>
+          </div>
+        
+    <hr>
+         
+        <section class="testimonials" id="gobottom">
+          <div class="container">
+              <div class="row">
+                  <div class="col-md-4 mb-3 wow bounceInUp" data-wow-duration="1.4s">
+                      <div class="big-img">
+                          <img src="../static/images/logo.jpg" class="img-fluid">
+                      </div>
+                  </div>
+                  <div class="col-md-8">
+                      <div class="inner-section wow fadeInUp">
+                          <h3>YOUR ULTIMATE <span class="bg-main">LAPTOP GUIDE.</span></h3>
+                          <br>
+                          <b class="text-justify">
+                              Laptop Mag has been testing and reviewing laptops for over two decades. We test over 200 different models per year, subjecting each system to a series of rigorous benchmarks that provides a complete picture of performance, battery life and usability.
+
+                              Our expert reviewers also use each product to see how it looks and feels in everyday situations. Because we see so many different notebooks, we can compare each to its direct competitors and give you an idea of how it stacks up to the average laptop in its price band.
+                              
+                               </b>
+  
+                          <div class="linear-grid">
+                              <div class="row">
+                                  <div class="col-sm-6 col-md-3 mb-2 wow bounceInUp" data-wow-duration="1.4s" >
+                                      <img src="https://images.pexels.com/photos/534031/pexels-photo-534031.jpeg?auto=compress&cs=tinysrgb&h=350" class="img-thumbnail">
+                                  </div>
+                                  <div class=" col-sm-6 col-md-3 mb-2 wow bounceInUp" data-wow-duration="1.4s">
+                                      <img src="https://images.pexels.com/photos/258804/pexels-photo-258804.jpeg?auto=compress&cs=tinysrgb&h=350" class="img-thumbnail">
+                                  </div>
+                                  <div class="col-sm-6 col-md-3 mb-2 wow bounceInUp" data-wow-duration="1.4s">
+                                      <img src="https://images.pexels.com/photos/285598/pexels-photo-285598.jpeg?auto=compress&cs=tinysrgb&h=350" class="img-thumbnail">
+                                  </div>
+                                  <div class="col-sm-6 col-md-3 mb-2 wow bounceInUp" data-wow-duration="1.4s">
+                                      <img src="https://images.pexels.com/photos/167605/pexels-photo-167605.jpeg?auto=compress&cs=tinysrgb&h=350" class="img-thumbnail">
+                                  </div>
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </section>
+  
+      <section class="testimonials mybg-events">
+  
+          <div class="container">
+              
+              <div class="row">
+                  <div class="col-md-12 wow fadeInUp">
+                      <h3 class="title-heading text-center"><b></b></h3>
+                      <b class="myp text-center text-white"></b>
+                  </div>
+              </div>
+              <div class="row wow slideInLeft" data-wow-duration="3s">
+                  <div class="col-md-4 mb-3">
+                      <div class="big-img2">
+                          <img class="img-fluid border" src="../static/images/laptop1.jpeg" style="object-fit: cover;">
+                      </div>
+                      
+                  </div>
+                  <div class="col-md-8">
+                      <div class="inner-section">
+                          <div class="my-grid">
+                              <div class="row">
+                                  <div class="col-sm-6 col-md-4 mb-3">
+                                     
+                                      <img class="img-fluid border " src="../static/images/laptop2.jpeg" style="object-fit: cover;">
+                                      
+                                  </div>
+                                  <div class="col-sm-6 col-md-8 mb-3 ">
+                                      
+                                      <img class="img-fluid border" src="../static/images/laptop3.jpeg" style="object-fit: cover;">
+                                  
+                                  </div>
+  
+                                  <div class="col-md-8 mb-3" style="background: transparent;">
+                                      <div class="text-block">
+                                          <h4 class="events-heading text-center">Best of all worlds</h4>
+                                          <b class="myp-font"> From budget, to ultraportable, to gaming laptops, our top picks feature the best tech advances in laptop PCs, from new powerful CPUs and GPUs from Nvidia and AMD in the ever changing dynamic market Find all your doubt satisfied here.</b>
+                                      </div>
+                                  </div>
+                                  <div class=" col-md-4 ">
+                                       
+                                      <img class="img-fluid border" src="../static/images/laptop4.jpeg" style="object-fit: cover;">
+                                  
+                                  </div>
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </section>
+  
+      <section class="testimonials bg-light" id="marketplace">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-8 mx-auto wow fadeInUp">
+                        <h3 class="text-center font-weight-bold">Best<span class="bg-main"> LAPTOPS</span> in the industry.</h3>
+                    <p></p>
+                      </div>
+                </div>
+                <div class="row" id="gaming">
+                        <div class="col-lg-4 mb-4 column gaming">
+                            <a class="card border" href="razer">
+                                <img class="card-img-top" style="height: 300px;"src="../static/images/razer.jpg" alt="">
+                                <div class="card-body " style="background-size: cover;">
+                                    <h5 class="card-title text-center">Razer Blade 15</h5>
+                                    <p class="card-text">The Razer Blade is one of the smallest 15.6” gaming laptops, 
+                                     striking the perfect balance of power and portability.</p>
+                                   </div>
+                            </a>
+                        </div>
+                        <div class="col-lg-4 mb-4 column gaming">
+                           <a class="card border" href="asus">
+                               <img class="card-img-top" style="height: 300px;"src="../static/images/Asus.jpg" alt="">
+                               <div class="card-body" style="background-size: cover;">
+                                   <h5 class="card-title">Asus ROG</h5>
+                                   <p class="card-text">ROG laptops undergo extensive vibration, drop, and pressure testing to ensure they can survive everyday use, while their hinges, keyboards, and ports are tested for resilience against common wear. </p>
+                                  </div>
+                           </a>
+                       </div>
+                       <div class="col-lg-4 mb-4 column gaming">
+                            <a class="card border" href="msi" style="background-size: cover;">
+                                <img class="card-img-top" style="height: 300px;" src="../static/images/msi.jpg"alt="">
+                                <div class="card-body" style="background-size: cover;">
+                                    <h5 class="card-title">MSI</h5>
+                                    <p class="card-text">                                The Prestige 15 is powered by the 10th Gen Intel Core i7 processor, for on-the-go creators to breeze through demanding tasks faster than ever before.
+                                     </p>
+                                                        </div>
+                            </a>
+                        </div>
+                    </div>
+                         
+              </div>
+        </section>
+    
+      <section class="testimonials text-center mybg-music">
+          <div class="container">
+              <div class="row">
+                  <div class="col-md-12 wow fadeInUp">
+                      <h3 class="title-heading text-center font-weight-bold">The best BRANDS.</h3>
+                      <p class="myp text-center">We only review the best. No weaklings. <i>Except Apple maybe. </i></p>
+                  </div>
+              </div>
+              <div class="row">
+                  <div class="col-sm-6 col-md-4 col-lg-3 mt-4 gal-item wow bounceInUp" data-wow-duration="1.4s">
+                      <div class="music-gal item box">
+                          <a href="https://images.pexels.com/photos/761963/pexels-photo-761963.jpeg?auto=compress&cs=tinysrgb&h=650&w=940" class="fancybox" rel="ligthbox">
+                          <img class="img-fluid" src="../static/images/acerlogo.jpg" style="object-fit: cover;width: 100%;">
+                          </a>
+                      </div>
+                  </div>
+                  <div class="col-sm-6 col-md-4 col-lg-3 mt-4 gal-item wow bounceInUp" data-wow-duration="1.4s">
+                      <div class="music-gal item box">
+                          <a href="https://images.pexels.com/photos/838696/pexels-photo-838696.jpeg?auto=compress&cs=tinysrgb&h=650&w=940" class="fancybox" rel="ligthbox">
+                            <img class="img-fluid" src="../static/images/asuslogo.jpg" style="object-fit:cover;width: 100%;">
+                          </a>
+                      </div>
+                  </div>
+                  <div class="col-sm-6 col-md-4 col-lg-3 mt-4 gal-item wow bounceInUp" data-wow-duration="1.4s">
+                      <div class="music-gal item box">
+                          <a href="https://images.pexels.com/photos/1047930/pexels-photo-1047930.jpeg?auto=compress&cs=tinysrgb&h=650&w=940" class="fancybox" rel="ligthbox">
+                            <img class="img-fluid" src="../static/images/lglogo.jpg" style="object-fit: cover;width: 100%;">
+                          </a>
+                      </div>
+                  </div>
+                  <div class="col-sm-6 col-md-4 col-lg-3 mt-4 gal-item wow bounceInUp" data-wow-duration="1.4s">
+                      <div class="music-gal item box">
+                          <a href="https://images.pexels.com/photos/164693/pexels-photo-164693.jpeg?auto=compress&cs=tinysrgb&h=650&w=940" class="fancybox" rel="ligthbox">
+                            <img class="img-fluid" src="../static/images/lenovologo.jpg" style="object-fit: cover;width: 100%;">
+                          </a>
+                      </div>
+                  </div>
+                  <div class="col-sm-6 col-md-4 col-lg-3 mt-4 gal-item wow bounceInUp" data-wow-duration="1.4s">
+                      <div class="music-gal item box">
+                          <a href="https://images.pexels.com/photos/876713/pexels-photo-876713.jpeg?auto=compress&cs=tinysrgb&h=650&w=940" class="fancybox" rel="ligthbox">
+                            <img class="img-fluid" src="../static/images/razerlogo.jpg" style="object-fit: cover;width: 100%;">
+                          </a>
+                      </div>
+                  </div>
+                  <div class="col-sm-6 col-md-4 col-lg-3 mt-4 gal-item wow bounceInUp" data-wow-duration="1.4s">
+                      <div class="music-gal item box">
+                          <a href="https://images.pexels.com/photos/210887/pexels-photo-210887.jpeg?auto=compress&cs=tinysrgb&h=650&w=940" class="fancybox" rel="ligthbox">
+                            <img class="img-fluid" src="../static/images/applelogo.jpg" style="object-fit: cover;width: 100%;">
+                          </a>
+                      </div>
+                  </div>
+                  <div class="col-sm-6 col-md-4 col-lg-3 mt-4 gal-item wow bounceInUp" data-wow-duration="1.4s">
+                      <div class="music-gal item box">
+                          <a href="https://images.pexels.com/photos/210922/pexels-photo-210922.jpeg?auto=compress&cs=tinysrgb&h=650&w=940" class="fancybox" rel="ligthbox">
+                            <img class="img-fluid" src="../static/images/msilogo.jpg" style="object-fit: cover;width: 100%;">
+                          </a>
+                      </div>
+                  </div>
+
+                  <div class="col-sm-6 col-md-4 col-lg-3 mt-4 gal-item wow bounceInUp" data-wow-duration="1.4s">
+                      <div class="music-gal item box">
+                          <a href="https://images.pexels.com/photos/167589/pexels-photo-167589.jpeg?auto=compress&cs=tinysrgb&h=650&w=940" class="fancybox" rel="ligthbox">
+                            <img class="img-fluid" src="../static/images/surfacelogo.jpg" style="object-fit: cover; width: 100%;">
+                          </a>
+                      </div>
+                  </div>
+                
+              </div>
+          </div>
+      </section>
+     
+     
+      <footer class="footer bg-dark">
+
+                      <center class="  text-light small mb-4 mb-lg-0 justify-content-center">© Rithik Makhija 2019. All Rights Reserved.</center>
+
+      </footer>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>
+       <script>
+                new WOW().init();
+                </script>
+      <script>
+          $(window).scroll( function(){
+  
+   
+            var topWindow = $(window).scrollTop();
+            var topWindow = topWindow * 1.5;
+            var windowHeight = $(window).height();
+            var position = topWindow / windowHeight;
+            position = 1 - position;
+          
+            $('#bottom').css('opacity', position);
+          
+          });
+  
+
+  
+   
+          
+          $(function() {
+    $('#bottom').click(function() {
+      if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
+        var target = $(this.hash);
+        target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
+        if (target.length) {
+          $('html,body').animate({
+            scrollTop: target.offset().top
+          }, 500);
+          return false;
+        }
+      }
+    });
+  });
+  
+  
+  </script>
+  <script>
+      $(document).ready(function(){
+        $(".fancybox").fancybox({
+              openEffect: "none",
+              closeEffect: "none"
+          });
+      });
+  </script>           
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+crossorigin="anonymous"></script>
+{% endblock %}
+
+</body>
+
+</html>

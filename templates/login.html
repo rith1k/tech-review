@@ -1,0 +1,442 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>My Laptop Website</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css"
+        integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+        <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    <style>
+        .searchbar {
+            margin-bottom: auto;
+            margin-top: auto;
+            background-color: #353b48;
+            right: 0;
+            border-radius: 30px;
+        }
+
+        .search_input {
+            color: white;
+            border: 0;
+            outline: 0;
+            background: none;
+            width: 0;
+            caret-color: transparent;
+            line-height: 40px;
+            transition: width 0.4s linear;
+        }
+
+        .searchbar:hover>.search_input {
+            padding: 0 10px;
+            width: 450px;
+            caret-color: red;
+            text-emphasis: none;
+
+            transition: width 0.4s linear;
+        }
+
+        .searchbar:hover>.search_icon {
+            background: white;
+            text-emphasis: none;
+            text-decoration: none;    
+            color: #e74c3c;
+        }
+
+        .search_icon {
+            height: 40px;
+            width: 40px;
+            float: right;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 50%;
+            color: white;
+            text-decoration: none;
+        }
+
+        #bgim {
+            color: #6a6f8c;
+            background-image: linear-gradient(340deg, #21D4FD 0%, #B721FF 100%);
+            background-size: cover;
+            width: 100%;
+            height: 820px;
+            font: 600 16px/18px 'Open Sans', sans-serif;
+        }
+
+        *,
+        :after,
+        :before {
+            box-sizing: border-box
+        }
+
+        .clearfix:after,
+        .clearfix:before {
+            content: '';
+            display: table
+        }
+
+        .clearfix:after {
+            clear: both;
+            display: block
+        }
+
+        a {
+            color: inherit;
+            text-decoration: none
+        }
+
+        .login-wrap {
+            width: 100%;
+            margin: auto;
+            max-width: 525px;
+
+            min-height: 670px;
+            position: relative;
+            background: url(../static/images/loginpage.jpg) no-repeat center;
+            background-size: cover;
+            box-shadow: 0 12px 15px 0 rgba(0, 0, 0, .24), 0 17px 50px 0 rgba(0, 0, 0, .9);
+        }
+
+        .login-html {
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            padding: 90px 70px 50px 70px;
+            background: rgba(0, 0, 0, .44);
+        }
+
+        .login-html .sign-in-htm,
+        .login-html .sign-up-htm {
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            position: absolute;
+            -webkit-transform: rotateY(180deg);
+            transform: rotateY(180deg);
+            -webkit-backface-visibility: hidden;
+            backface-visibility: hidden;
+            transition: all .4s linear;
+        }
+
+        .login-html .sign-in,
+        .login-html .sign-up,
+        .login-form .group .check {
+            display: none;
+        }
+
+        .login-html .tab,
+        .login-form .group .label,
+        .login-form .group .button {
+            text-transform: uppercase;
+        }
+
+        .login-html .tab {
+            font-size: 22px;
+            margin-right: 15px;
+            padding-bottom: 5px;
+            margin: 0 15px 10px 0;
+            display: inline-block;
+            border-bottom: 2px solid transparent;
+        }
+
+        .login-html .sign-in:checked+.tab,
+        .login-html .sign-up:checked+.tab {
+            color: #fff;
+            border-color: #1161ee;
+            font-weight: bold;
+            text-decoration: solid;
+        }
+
+        .login-form {
+            min-height: 345px;
+            position: relative;
+            -webkit-perspective: 1000px;
+            perspective: 1000px;
+            -webkit-transform-style: preserve-3d;
+            transform-style: preserve-3d;
+        }
+
+        .login-form .group {
+            margin-bottom: 15px;
+        }
+
+        .login-form .group .label,
+        .login-form .group .input,
+        .login-form .group .button {
+            width: 100%;
+            color: #fff;
+            text-decoration: solid;
+            display: block;
+            font-weight: bold;
+        }
+
+        .login-form .group .input,
+        .login-form .group .button {
+
+            border: none;
+            padding: 15px 20px;
+            border-radius: 25px;
+            background: rgba(255, 255, 255, .1);
+        }
+
+        .login-form .group input[data-type="password"] {
+            -webkit-text-security: circle;
+        }
+
+        .login-form .group .label {
+
+            color: #aaa;
+            font-size: 12px;
+        }
+
+        .login-form .group .button {
+            background: #1161ee;
+        }
+
+        .login-form .group label .icon {
+            width: 15px;
+            height: 15px;
+            border-radius: 2px;
+            position: relative;
+            display: inline-block;
+            background: rgba(255, 255, 255, .1);
+        }
+
+        .login-form .group label .icon:before,
+        .login-form .group label .icon:after {
+            content: '';
+            width: 10px;
+            height: 2px;
+            background: #fff;
+            position: absolute;
+            transition: all .2s ease-in-out 0s;
+        }
+
+        .login-form .group label .icon:before {
+            left: 3px;
+            width: 5px;
+            bottom: 6px;
+            -webkit-transform: scale(0) rotate(0);
+            transform: scale(0) rotate(0);
+        }
+
+        .login-form .group label .icon:after {
+            top: 6px;
+            right: 0;
+            -webkit-transform: scale(0) rotate(0);
+            transform: scale(0) rotate(0);
+        }
+
+        .login-form .group .check:checked+label {
+            color: #fff;
+        }
+
+        .login-form .group .check:checked+label .icon {
+            background: #1161ee;
+        }
+
+        .login-form .group .check:checked+label .icon:before {
+            -webkit-transform: scale(1) rotate(45deg);
+            transform: scale(1) rotate(45deg);
+        }
+
+        .login-form .group .check:checked+label .icon:after {
+            -webkit-transform: scale(1) rotate(-45deg);
+            transform: scale(1) rotate(-45deg);
+        }
+
+        .login-html .sign-in:checked+.tab+.sign-up+.tab+.login-form .sign-in-htm {
+            -webkit-transform: rotate(0);
+            transform: rotate(0);
+        }
+
+        .login-html .sign-up:checked+.tab+.login-form .sign-up-htm {
+            -webkit-transform: rotate(0);
+            transform: rotate(0);
+        }
+
+        .hr {
+            height: 2px;
+            margin: 60px 0 50px 0;
+            background: rgba(255, 255, 255, .2);
+        }
+
+        .foot-lnk {
+            text-align: center;
+        }
+
+
+        .btn-grad {
+            background-image: linear-gradient(to right, #000046 0%, #1CB5E0 51%, #000046 100%)
+        }
+
+        .btn-grad:hover {
+            background-position: right center;
+        }
+
+        nav {
+            top: 0;
+
+        }
+    </style>
+</head>
+<nav class="navbar navbar-expand-md justify-content-between bg-dark fixed navbar-dark sticky-top">
+    <a class="navbar-brand" href="/">LaptopMag</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="collapsibleNavbar">
+        <ul class="navbar-nav">
+            {% if session['logged in'] == True %}
+            <li class="nav-item">
+                <a class="nav-link" href="logout">Logout</a>
+            </li>
+
+            {% else %}
+            <li class="nav-item">
+                <a class="nav-link" href="login">Sign-up/Login</a>
+            </li>
+            {%endif%}
+            <li class="nav-item">
+                <a class="nav-link" href="reviews">Review</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="aboutus">About us</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="news">News</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="guestbook">Guestbook</a>
+            </li>
+            
+
+        </ul>
+
+        <form class="form-inline my-2 my-lg-0">
+            <div class="searchbar">
+                <a href="search" class="search_icon"><i class="fas fa-search"></i></a>
+            </div>
+        </form>
+    </div>
+ <ul class="navbar-nav">   <li class="nav-item" style="float:right; border-right: white solid 2px;">
+        <a class="nav-link" >Today's Temperature in Dubai is <span>{{today_weather}}</span></a>
+    </li>
+    <li class="nav-item" style=" border-right: white solid 2px;">
+        <a class="nav-link" >Dubai Time is <span>{{local_time}}</span></a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" >Price of 1<i class="fa fa-btc" style="font-size:16px" aria-hidden="true"></i>= USD <i style="font-size:16px" class="fa fa-dollar-sign"></i> <span>{{coin}}</span></a>
+    </li></ul>
+</nav>
+{% block content %}
+
+
+<body id="bgim">
+
+
+    <div>
+        {% if register_success=="You've been successfully registered please log in" %}
+        <div class="alert alert-warning alert-dismissible fade show" role="alert">
+            <strong>Success:</strong> {{register_success}}
+            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+            </button>
+        </div>
+        {% elif login_error=="Your username/passwords do not match, please retype" %}
+        <div class="alert alert-warning alert-dismissible fade show" role="alert">
+            <strong>Error:</strong> {{login_error}}
+            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+            </button>
+        </div>
+
+        {%endif%}
+
+
+
+
+        <div class="login-wrap ">
+
+            <div class="login-html pt-5 ">
+                <input id="tab-1" type="radio" name="tab" class="sign-in" checked><label for="tab-1" class="tab">Sign
+                    In</label>
+                <input id="tab-2" type="radio" name="tab" class="sign-up"><label for="tab-2" class="tab">Sign Up</label>
+                <div class="login-form">
+                    <form method="POST" action="" class="sign-in-htm">
+                        <div class="group">
+                            <label for="user" class="label">Username</label>
+                            <input id="user" name="username" type="text" class="input">
+                        </div>
+                        <div class="group">
+                            <label for="pass" class="label">Password</label>
+                            <input id="pass" name="password" type="password" class="input" data-type="password">
+                        </div>
+                        <div class="group">
+                            <input type="submit" class="button" value="Sign In" class="btn-grad">
+
+                        </div>
+                        <div class="hr"></div>
+
+                        <div class="foot-lnk">
+                            <a href="#forgot">Forgot Password?</a>
+                        </div>
+                    </form>
+                    <form action="{{ url_for('sign') }}" method=post>
+                        <dl>
+
+                            <div class="sign-up-htm">
+                                <div class="group">
+                                    <label for="user" class="label">Username</label>
+                                    <dd> <input id="user" type="text" class="input" name="username">
+                                </div>
+                                <div class="group">
+                                    <label for="pass" class="label">Password</label>
+                                    <dd><input id="pass" type="password" class="input" data-type="password"
+                                            name="password">
+                                </div>
+                                <div class="group">
+                                    <label for="pass" class="label">Repeat Password</label>
+                                    <dd><input id="pass" type="password" class="input" data-type="password">
+                                </div>
+                                <div class="group">
+                                    <label for="pass" class="label">Email Address</label>
+                                    <dd> <input id="pass" type="text" class="input" name="email">
+                                </div>
+                                <div class="group">
+                                    <input type="submit" class="button" value="Sign Up" name="sign">
+                                </div>
+                                <div class="hr"></div>
+                                <div class="foot-lnk">
+                                    <label for="tab-1">Already Member?</a>
+                                </div>
+                            </div>
+                        </dl>
+
+                    </form>
+
+                </div>
+            </div>
+        </div>
+
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+            integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+            crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
+            integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+            crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
+            integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+            crossorigin="anonymous"></script>
+
+        {% endblock %}
+    </div>
+
+</body>
+
+</html>
